@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive H</title>
+    <script src="https://kit.fontawesome.com/7257720e15.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="./images/pexels-pressmaster-3141208-3840x2160-25fps.mp4">
+    </video>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="https://www.youtube.com/channel/UCgfzWWgS4b4h9I_EBHcvcvQ">Web Dev Creative</a></div>
+            <ul class="links">
+                <li><a href="home">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="Services">Services</a></li>
+                <li><a href="Contact">Contact</a></li>
+            </ul>
+            <a href="#" class="action-btn">Get started</a>
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown-menu ">
+            <li><a href="hero">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li><a href="#" class="action-btn">Get started</a></li>   
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1 onclick="https://arc.net/">START</h1>
+            <p>Start your web adventure now</p>    
+        </section>
+    </main>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn')
+        const toggleBtnIcon = document.querySelector('.toggle-btn i')
+        const dropdownMenu = document.querySelector('.dropdown-menu')
+
+        toggleBtn.onclick = function() {
+            dropdownMenu.classList.toggle('open')
+            const isOpen = dropdownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                    ?'fa-solid fa-xmark'
+                    :'fa-solid fa-bars'
+
+        }
+        
+        console.log('izan')
+        const $h1 = document.querySelector('h1')
+
+        $h1.addEventListener('click', function() {
+        window.location.href = 'https://arc.net/';
+        });
+
+        console.log('izan')
+
+    </script>
+    
+    
+</body>
+</html>
